@@ -1,9 +1,18 @@
+function play(){
+    document.getElementById("hal2").style.display = "none";
+    document.getElementById("game").style.display = "block";
+    document.getElementById("namep1").innerHTML = disp_player1;
+    document.getElementById("namep2").innerHTML = disp_player2;
+}
+
 /*
 Kami menyimpan elemen status game kami di sini agar kami dapat lebih mudah
 gunakan nanti
 */
 const statusDisplay = document.querySelector('.game--status');
 const statusDisplay_score = document.querySelector('.game--score');
+const statusDisplay_name = document.querySelector('.game--name');
+const statusDisplay_name2 = document.querySelector('.game--name2');
 /*
 Di sini kami mendeklarasikan beberapa variabel yang akan kami gunakan untuk melacak
 keadaan game melalui game.
@@ -24,6 +33,20 @@ let gameState = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
 let player1 = 0
 let player2 = 0
 /*
+Kami membuat display informasi player
+*/
+const display_name = () => `${disp_player1}'s`;
+const display_name2 = () => `${disp_player2}'s`;
+
+function klik() {
+    disp_player1 = document.getElementById("plyname").value;
+    disp_player2 = document.getElementById("plyname2").value;
+    console.log(disp_player1,disp_player2)
+}
+
+var disp_player1 = ""
+var disp_player2 = ""
+/*
 Di sini kami telah menyatakan beberapa pesan yang akan kami tampilkan kepada pengguna selama permainan.
 Karena kami memiliki beberapa faktor dinamis dalam pesan tersebut, yaitu pemain saat ini,
 kami telah mendeklarasikannya sebagai fungsi, sehingga pesan aktual dibuat dengan
@@ -38,6 +61,8 @@ Kami mengatur pesan awal agar para pemain tahu giliran siapa
 */
 statusDisplay.innerHTML = currentPlayerTurn();
 statusDisplay_score.innerHTML = score_Message();
+statusDisplay_name.innerHTML = display_name();
+statusDisplay_name2.innerHTML = display_name2();
 
 
 function handleCellPlayed(clickedCell, clickedCellIndex) {
@@ -53,6 +78,9 @@ function handlePlayerChange() {
         currentPlayer = currentPlayer === "X" ? "O" : "X";
         statusDisplay.innerHTML = currentPlayerTurn();
         statusDisplay_score.innerHTML = score_Message();
+        statusDisplay_name.innerHTML = display_name();
+        statusDisplay_name2.innerHTML = display_name2();
+        console.log(disp_player1,disp_player2)
 }
 
 function handleResultValidation() {

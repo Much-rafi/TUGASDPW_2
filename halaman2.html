@@ -1,21 +1,69 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Player Vs Player</title>
-        <link rel="stylesheet" href="styleku.css">
-    </head>
-    <body>
-        <div class="container">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Player Vs Player</title>
+	<link rel="stylesheet" href="styleku.css">
+</head>
+<body>
+	<div id="hal2" style="display: block;">
+		<div class="container">
+			<div class="header">
+					<h4>Tic tac Toe
+						<a href="about.html" class="kiri">About</a> 
+						<a href="cara.html">Cara Bermain</a>
+					</h4>
+			</div>
+			<div>
+				<center><table>
+					<tr>
+						<td></td>
+						<td>
+							<div class="container-input2">
+								<div class="container-input1">
+									<h4>Player 1</h4>
+								</div>
+								<p><img src="orang2.png"></p>
+								<p><input type="text" id="plyname" placeholder="masukkan nama player 1" class="inputan"></p>
+							</div>
+						</td>
+						<td>
+							<div class="container-input2">
+								<div class="container-input1">
+									<h4>player 2</h4> 
+								</div>
+								<p><img src="orang1.png"></p>
+								<p><input type="text" id="plyname2" placeholder="masukkan nama player 2" class="inputan"></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><button type="button" id="" class="btn"><a href="index.html">Back</a></button></td>
+						<td></td>
+						<td><button type="button" onclick="klik()" class="btn">Simpan</button></td>
+                        			<td><button type="button" id="" class="btn" onclick="play()">Next</button></td>
+					</tr>
+				</table>
+				</div>
+				<div class="footer mar">
+					<marquee>Tugas Kelompok Dasar Pemrograman Web --- Rosita Dewi Lutfiyah --- Muchamad Rafi Saputra --- Mukhammad Zaidan Abdulloh </marquee>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="game" style="display: none;">
+		<div class="container">
             <div class="header">
-                <h2>Tic tac Toe
+                <h4>Tic tac Toe
                     <a href="about.html" class="kiri">About</a> 
                     <a href="cara.html">Cara Bermain</a>
                     <audio controls="true" class="uk">
                         <source src="tictic.mp3">
                     </audio>
-                </h2>
+                </h4>
             </div>
             <div class="container-inputan2">
                 <section>
@@ -23,7 +71,6 @@
                     <tr>
                         <td>
                             <p><img src="orang2.png" class="img-satu"></p>
-                            <p id="p1"></p>
                         </td>
                         <td>
                             <div class="game--container">
@@ -59,7 +106,6 @@
                         </td>
                          <td>
                             <p><img src="orang1.png" class="img-dua"></p>
-                            <p id="p2"></p>
                         </td>
                         <td>
                             <div class="container-score2">
@@ -71,8 +117,8 @@
                                 </div>
                                 <center><table border="1" class="space">
                                     <tr>
-                                        <td><p id="p1">...</td>
-                                        <td><p id="p2">...</td>
+                                        <td><p id="namep1" class="game--name"></p></td>
+                                        <td><p id="namep2" class="game--name2"></p></td>
                                     </tr>
                                     <tr>
                                         <td><img src="orang2.png" class="image"></td>
@@ -85,7 +131,7 @@
                             </div>
                             <div class="info">
                                 <button class="game--restart btn">Refresh</button>
-                                <button type="button" class="btn"><a href="index.html">Back</a></button>
+                                <button type="button" id="" class="btn"><a href="index.html">Back</a></button>
                             </div>
                         </td>
                     </tr>
@@ -96,6 +142,7 @@
             <marquee>Tugas Kelompok Dasar Pemrograman Web --- Rosita Dewi Lutfiyah --- Muchamad Rafi Saputra --- Mukhammad Zaidan Abdulloh </marquee>
         </div>
     </div>
-<script src="script.js"></script>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>

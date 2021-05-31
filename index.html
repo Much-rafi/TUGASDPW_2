@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman dua</title>
+    <link rel="stylesheet" type="text/css" href="styleku.css">
+</head>
+<body style="background-color: white;">
+    <div class="container">
+        <div class="header">
+            <h4>Tic tac Toe
+                <a href="about.html" class="kiri">About</a> 
+                <a href="cara.html">Cara Bermain</a>
+            </h4>
+        </div>
+        <div class="judul">
+             <marquee><h1>Welcome To Tic Tac Toe --- Tic Tac Toe --- Tic Tac Toe</h1></marquee>       
+        </div>
+        <div>
+              <center><img class="lala" src="https://orig00.deviantart.net/413c/f/2015/156/1/a/tic_tac_toe__by_junguler-d8w3fzo.gif" alt=""></center>
+        </div>
+        <div>
+            <center>
+                <button class="btn-1" onclick="lala()"><a href="main1.html">player vs bot</a></button>
+                <button class="btn-1" onclick=""><a href="halaman2.html"> player vs player</a></button>
+            </center>
+        </div>
+        <div class="footer mar">
+            <marquee>Tugas Kelompok Dasar Pemrograman Web --- Rosita Dewi Lutfiyah --- Muchamad Rafi Saputra --- Mukhammad Zaidan Abdulloh </marquee>
+        </div>
+    </div>
+
+    <script>
+        var $elem = $('.header');
+
+        MotionUI.animateIn($elem, 'slide-in-left', 
+        function() {
+        console.log('Transition finished!');
+        });
+        
+    </script>
+</body>
+</html>
